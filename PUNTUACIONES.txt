@@ -1,0 +1,3 @@
+juan 300
+leo 30
+gcd 31

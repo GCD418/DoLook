@@ -31,6 +31,7 @@ void print() {
             cout << endl;
         }
 }
+string linea;
 
 int main() {
     mov['d'] = {0, 1};
@@ -38,7 +39,25 @@ int main() {
     mov['a'] = {0, -1};
     mov['s'] = {1, 0};
     c=0;
-    while(1) {
+    char aux[200];
+
+    ifstream f;
+    //int i, dato;
+    f.open("datos.txt");
+    if(!f)
+        cout << "Error abriendo el fichero" << endl;
+    else
+    {
+        for(i = 1; i <= 10; i++)
+        {
+            f >> dato;
+            cout << dato << endl;
+        }
+        f.close();
+    }
+
+
+    /*while(1) {
         print();
         cin >> s;
         nx = pos.first + mov[s].first;
@@ -77,6 +96,6 @@ int main() {
         }
         system("cls");
 
-    }
+    }*/
     return 0;
 }

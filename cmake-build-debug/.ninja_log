@@ -1,3 +1,17 @@
 # ninja log v5
 1	2230	7061442325099795	CMakeFiles/DoLook.dir/JuegoLaberinto.cpp.obj	768d58b0982ab3ea
 2243	2463	7061442327408946	DoLook.exe	2fa9affc0d0a76c3
+4	2222	7061465265054501	CMakeFiles/DoLook.dir/JuegoLaberinto.cpp.obj	768d58b0982ab3ea
+2223	2430	7061465267029078	DoLook.exe	2fa9affc0d0a76c3
+4	2281	7061473061358911	CMakeFiles/DoLook.dir/JuegoLaberinto.cpp.obj	768d58b0982ab3ea
+2281	2429	7061473062779860	DoLook.exe	2fa9affc0d0a76c3
+3	2161	7061473428131598	CMakeFiles/DoLook.dir/JuegoLaberinto.cpp.obj	768d58b0982ab3ea
+2162	2323	7061473429726401	DoLook.exe	2fa9affc0d0a76c3
+3	2165	7061474234793210	CMakeFiles/DoLook.dir/JuegoLaberinto.cpp.obj	768d58b0982ab3ea
+2166	2366	7061474236792824	DoLook.exe	2fa9affc0d0a76c3
+3	2164	7061474591172193	CMakeFiles/DoLook.dir/JuegoLaberinto.cpp.obj	768d58b0982ab3ea
+2174	2353	7061474593010556	DoLook.exe	2fa9affc0d0a76c3
+5	2245	7061474966480074	CMakeFiles/DoLook.dir/JuegoLaberinto.cpp.obj	768d58b0982ab3ea
+2245	2413	7061474968135346	DoLook.exe	2fa9affc0d0a76c3
+4	2162	7061476465580773	CMakeFiles/DoLook.dir/JuegoLaberinto.cpp.obj	768d58b0982ab3ea
+2163	2304	7061476466965594	DoLook.exe	2fa9affc0d0a76c3
