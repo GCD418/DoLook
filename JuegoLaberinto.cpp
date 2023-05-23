@@ -4,8 +4,9 @@
 
 using namespace std;
 
-int nx, ny, tx = 12, ty = 23, c;
+int nx, ny, tx = 12, ty = 23, c, movements = 0;
 map < char, pair < int, int > > mov;
+
 char s;
 pair < int, int > pos = {1, 0};
 char mat [12][23] = {{'#', '#', '*', '*', '*', '*', '*', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'},
@@ -33,6 +34,7 @@ void print() {
 }
 
 int main() {
+    //cout << char(178) << endl;
     mov['d'] = {0, 1};
     mov['w'] = {-1, 0};
     mov['a'] = {0, -1};
@@ -41,6 +43,7 @@ int main() {
     while(1) {
         print();
         cin >> s;
+        movements ++;
         nx = pos.first + mov[s].first;
         ny = pos.second + mov[s].second;
         mat[nm[c].first][nm[c].second] = '*' ;

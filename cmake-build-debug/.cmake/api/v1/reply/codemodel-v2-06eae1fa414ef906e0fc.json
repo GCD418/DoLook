@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,7 +31,8 @@
 					"name" : "DoLook",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -41,6 +43,13 @@
 					"id" : "DoLook::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-DoLook-Debug-b2c5937a5512139ec6c6.json",
 					"name" : "DoLook",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Prueba::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Prueba-Debug-735e0a23afc1425c23e6.json",
+					"name" : "Prueba",
 					"projectIndex" : 0
 				}
 			]

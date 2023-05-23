@@ -1,3 +1,4 @@
 E:/Documents/UCB/Intro a progra/Juegoo/DoLook/cmake-build-debug/CMakeFiles/DoLook.dir
+E:/Documents/UCB/Intro a progra/Juegoo/DoLook/cmake-build-debug/CMakeFiles/Prueba.dir
 E:/Documents/UCB/Intro a progra/Juegoo/DoLook/cmake-build-debug/CMakeFiles/edit_cache.dir
 E:/Documents/UCB/Intro a progra/Juegoo/DoLook/cmake-build-debug/CMakeFiles/rebuild_cache.dir
