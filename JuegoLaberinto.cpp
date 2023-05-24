@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int nx, ny, tx = 12, ty = 23, c, c2, movements = 0;
+int nx, ny, tx = 12, ty = 23, c, c2, movements = 0, dif, blind_radio, visual_radio;
 vector < pair < string, long > > clasificador;
 map < char, pair < int, int > > mov;
 string handle;
@@ -30,13 +30,15 @@ char mat [12][23] = {{'#', '#', '*', '*', '*', '*', '*', '#', '#', '#', '#', '#'
     {'#', '*', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '*', '#', '#', '#', '#'},
     {'#', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '/', '#', '#', '#', '#'}
 };
-pair<int, int> nm[13]= {{3, 18}, {4, 18}, {5, 18}, {6, 18}, {7, 18}, {8, 18}, {9, 18}, {8, 18}, {7, 18}, {6, 18}, {5, 18}, {4, 18}, {3, 18}};
+pair<int, int> nm[12]= {{3, 18}, {4, 18}, {5, 18}, {6, 18}, {7, 18}, {8, 18}, {9, 18}, {8, 18}, {7, 18}, {6, 18}, {5, 18}, {4, 18}};
 pair<int, int> nm2[36]= {{9, 1}, {8, 1}, {7, 1}, {6, 1}, {6, 2}, {6, 3}, {6, 4}, {7, 4}, {7, 5}, {7, 6}, {8, 6}, {9, 6}, {9, 7}, {9, 8}, {9, 9}, {8, 9}, {7, 9}, {7, 10}, {7, 11}, {6, 11}, {5, 11}, {4, 11}, {4, 10}, {4, 9}, {4, 8}, {5, 8}, {5, 7}, {6, 7}, {6, 6}, {7, 6}, {7, 5}, {7, 4}, {8, 4}, {9, 4}, {9, 3}, {9, 2}};
 
 void print() {
     ffor(i, 0, 12) {
             ffor(j, 0, 23) {
-                cout << mat[i][j];
+                if(( abs(i-nm[c].first)<blind_radio && abs(j-nm[c].second)<blind_radio )||( abs(i-nm2[c2].first)<blind_radio && abs(j-nm2[c2].second)<blind_radio )){cout<<'o';}
+                else if( abs(i-pos.first)>visual_radio || abs(j-pos.second)>visual_radio ){cout<<'#';}
+                else{ cout << mat[i][j]; }
             }
             cout << endl;
         }
@@ -83,6 +85,23 @@ void guardarScore()
 
 void jugar()
 {
+    if(dif==1){
+        visual_radio=23;
+        blind_radio=-1;
+    }
+    else if(dif==2){
+        visual_radio=23;
+        blind_radio=-1;
+        mat[nm[1].first][nm[1].second] = '+' ;
+        mat[nm[2].first][nm[2].second] = '+' ;
+        mat[nm2[1].first][nm2[1].second] = '+' ;
+        mat[nm2[2].first][nm2[2].second] = '+' ;
+        mat[nm2[3].first][nm2[3].second] = '+' ;
+    }
+    else{
+        visual_radio=3;
+        blind_radio=2;
+    }
     while(1)
     {
         print();
@@ -90,12 +109,22 @@ void jugar()
         movements ++;
         nx = pos.first + mov[s].first;
         ny = pos.second + mov[s].second;
-        mat[nm[c].first][nm[c].second] = '*' ;
-        c=(c+1)%13;
-        mat[nm[c].first][nm[c].second] = '+' ;
-        mat[nm2[c2].first][nm2[c2].second] = '*' ;
-        c2=(c2+1)%36;
-        mat[nm2[c2].first][nm2[c2].second] = '+' ;
+        if(dif==1 || dif==3){
+            mat[nm[c].first][nm[c].second] = '*' ;
+            mat[nm2[c2].first][nm2[c2].second] = '*' ;
+            c=(c+1)%12;
+            c2=(c2+1)%36;
+            mat[nm[c].first][nm[c].second] = '+' ;
+            mat[nm2[c2].first][nm2[c2].second] = '+' ;
+        }
+        else if(dif==2){
+            mat[nm[c].first][nm[c].second] = '*' ;
+            mat[nm2[c2].first][nm2[c2].second] = '*' ;
+            c=(c+1)%12;
+            c2=(c2+1)%36;
+            mat[nm[(c+2)%12].first][nm[(c+1)%12].second] = '+' ;
+            mat[nm2[(c2+3)%36].first][nm2[(c2+3)%36].second] = '+' ;
+        }
         if( nx >= 0 && nx < tx && ny >= 0 && ny < ty ) {
             if(mat[nx][ny] == '+') {
                 mat[pos.first][pos.second] = '*';
@@ -131,6 +160,13 @@ void jugar()
 
 }
 
+void menu(){
+    cout<<"1.- Facil \n";
+    cout<<"2.- Normal \n";
+    cout<<"3.- Dificil \n";
+  //  cout<<"4.- Retroceder \n";
+}
+
 int main() {
     //cout << char(178) << endl;
     cout << "Ingresa un nombre de usuario, sin espacios ni caracteres raros" << endl;
@@ -141,6 +177,12 @@ int main() {
     mov['a'] = {0, -1};
     mov['s'] = {1, 0};
     c=0;
+    cout<<"Ingrese la dificultad en la que le gustaria jugar la proxima partida\n";
+    while(dif!=1 && dif!=3 && dif!=2 ){
+        menu();
+        cin>>dif;
+        if(dif!=1 && dif!=3 && dif!=2 ){cout<<"Esa opcion no existe, por favor vuelva a ingresar el numero\n";}
+    }
     jugar();
     return 0;
 }
