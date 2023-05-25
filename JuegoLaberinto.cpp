@@ -133,7 +133,7 @@ void jugar()
         if( nx >= 0 && nx < tx && ny >= 0 && ny < ty ) {
             if(mat[nx][ny] == char(197)) {
                 mat[pos.first][pos.second] = '*';
-                mat[nx][ny] = '@';
+                mat[nx][ny] = char(157);
                 system("cls");
                 print();
                 cout << "ESTAS MUERTO\n";
@@ -141,7 +141,7 @@ void jugar()
             }
             else if(mat[nx][ny] == '/') {
                 mat[pos.first][pos.second] = '*';
-                mat[nx][ny] = '$';
+                mat[nx][ny] = char(184);
                 system("cls");
                 print();
                 cout << "GANASTEEEEEEE" << endl;
@@ -191,4 +191,3 @@ int main() {
     jugar();
     return 0;
 }
-
