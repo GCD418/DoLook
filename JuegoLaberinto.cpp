@@ -110,7 +110,6 @@ void jugar()
     {
         print();
         cin >> s;
-        movements ++;
         nx = pos.first + mov[s].first;
         ny = pos.second + mov[s].second;
         if(dif==1 || dif==3){

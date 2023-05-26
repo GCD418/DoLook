@@ -25,9 +25,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JuegoLaberinto.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/JuegoLaberinto.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PUNTUACIONES.dat" beforeDir="false" afterPath="$PROJECT_DIR$/PUNTUACIONES.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/DoLook.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/DoLook.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,11 +80,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="CMake Application.DoLook" />
       <item itemvalue="CMake Application.Prueba" />
@@ -106,7 +99,9 @@
       <workItem from="1684440957239" duration="463000" />
       <workItem from="1684532044009" duration="603000" />
       <workItem from="1684806336308" duration="1913000" />
-      <workItem from="1684839574583" duration="4170000" />
+      <workItem from="1684839574583" duration="4331000" />
+      <workItem from="1684873472357" duration="45000" />
+      <workItem from="1685038470623" duration="1646000" />
     </task>
     <servers />
   </component>
